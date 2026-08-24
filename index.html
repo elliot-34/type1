@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hukuk Bürosu Mockup</title>
+    
+    <!-- Tailwind CSS CDN (Geliştirme için en hızlı yol) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tıklamalarda sayfanın akıcı kayması için -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- MENÜ (NAVBAR) -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <!-- Genişliği 7xl'e çıkardık, px-6 ile kenar boşluğunu dengeledik -->
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Sol Taraf: İkon ve Logo (Tıklanabilir) -->
+            <a href="#hero" class="flex items-center gap-3">
+                <!-- SVG Terazi İkonu -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                    <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                    <path d="M7 21h10"/>
+                    <path d="M12 3v18"/>
+                    <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+                </svg>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">Adalet Hukuk - ÖRNEK WEBSITE</h1>
+            </a>
+
+            <!-- Sağ Taraf: Linkler -->
+            <div class="space-x-6">
+                <a href="#hero" class="hover:text-blue-600 font-medium text-slate-700 transition">Ana Sayfa</a>
+                <a href="#hizmetler" class="hover:text-blue-600 font-medium text-slate-700 transition">Hizmetlerimiz</a>
+                <a href="#ekibimiz" class="hover:text-blue-600 font-medium text-slate-700 transition">Ekibimiz</a>
+                <a href="#iletisim" class="hover:text-blue-600 font-medium text-slate-700 transition">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- KARŞILAMA ALANI (HERO) - YENİ GÖRSELLİ VERSİYON -->
+    <section id="hero" class="relative h-screen flex items-center justify-center">
+        
+        <!-- Arka Plan Resmi ve Karartma (Overlay) -->
+        <div class="absolute inset-0 z-0">
+            <!-- Arka plan görseli (Unsplash'ten yüksek çözünürlüklü) -->
+            <img src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hukuk Bürosu" class="w-full h-full object-cover" />
+            <!-- Siyah yarı saydam katman (Yazıların okunması için) -->
+            <div class="absolute inset-0 bg-slate-900/75"></div>
+        </div>
+
+        <!-- İçerik (z-10 ile görselin üstünde kalmasını sağlıyoruz) -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">Adalete Giden Yolda <br> Güvenilir Rehberiniz</h2>
+            <p class="text-xl mb-10 text-gray-200">Profesyonel, şeffaf ve sonuç odaklı avukatlık hizmetiyle hukuki süreçlerinizde yanınızdayız.</p>
+            
+            <!-- Butonlar (Yan Yana) -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#iletisim" class="bg-blue-600 px-8 py-3 rounded-md font-semibold text-white hover:bg-blue-700 transition duration-300">
+                    Danışmanlık Alın
+                </a>
+                <a href="#hizmetler" class="bg-transparent border-2 border-white px-8 py-3 rounded-md font-semibold text-white hover:bg-white hover:text-slate-900 transition duration-300">
+                    Çalışma Alanlarımız
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HİZMETLER ALANI -->
+    <section id="hizmetler" class="py-16 bg-white flex flex-col items-center justify-center">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">Çalışma Alanlarımız</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <!-- CSS Grid ile Kart Düzeni (Mobilde 1, Tablette 2, Bilgisayarda 3 Kolon) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Kart 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Ceza Hukuku</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Soruşturma ve kovuşturma aşamalarında şüpheli, sanık veya müşteki vekilliği ile titiz ve şeffaf hukuki süreç yönetimi.
+                    </p>
+                </div>
+
+                <!-- Kart 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">🏢</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Ticaret ve Şirketler Hukuku</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Şirket kuruluşları, sözleşme hazırlama, birleşme ve devralma işlemleri ile günlük ticari faaliyetlerde hukuki danışmanlık.
+                    </p>
+                </div>
+
+                <!-- Kart 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">👨‍👩‍👧</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Aile Hukuku</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Anlaşmalı ve çekişmeli boşanma davaları, nafaka, velayet ve mal paylaşımı süreçlerinde hassas ve profesyonel temsil.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EKİBİMİZ ALANI -->
+    <section id="ekibimiz" class="py-16 bg-gray-50 flex flex-col items-center justify-center">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">Uzman Kadromuz</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">Haklarınızı savunmak için tecrübeli ekibimizle yanınızdayız.</p>
+            </div>
+
+            <!-- 3'lü Grid Yapısı -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Ekip Üyesi 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center border border-gray-100">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Av. Ahmet Yılmaz" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-50 object-cover">
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Av. Ahmet Yılmaz</h3>
+                    <p class="text-blue-600 font-medium text-sm mb-3">Kurucu Ortak</p>
+                    <p class="text-gray-500 text-sm">Ceza Hukuku ve İdare Hukuku alanlarında 15 yıllık dava ve danışmanlık tecrübesi.</p>
+                </div>
+
+                <!-- Ekip Üyesi 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center border border-gray-100">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Av. Elif Kaya" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-50 object-cover">
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Av. Elif Kaya</h3>
+                    <p class="text-blue-600 font-medium text-sm mb-3">Yönetici Ortak</p>
+                    <p class="text-gray-500 text-sm">Aile Hukuku, boşanma süreçleri ve Miras Hukuku uyuşmazlıklarında uzman.</p>
+                </div>
+
+                <!-- Ekip Üyesi 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center border border-gray-100">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Av. Caner Demir" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-50 object-cover">
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Av. Caner Demir</h3>
+                    <p class="text-blue-600 font-medium text-sm mb-3">Kıdemli Avukat</p>
+                    <p class="text-gray-500 text-sm">Ticaret Hukuku, şirket birleşmeleri ve işçi-işveren uyuşmazlıklarında deneyimli.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM ALANI -->
+    <section id="iletisim" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">İletişime Geçin</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">Hukuki sorunlarınız için profesyonel destek almak üzere bizimle iletişime geçebilirsiniz.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12">
+                <!-- Sol Taraf: İletişim Bilgileri -->
+                <div class="md:w-1/3 space-y-8">
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-2">📍 Merkez Ofis</h4>
+                        <p class="text-gray-600 leading-relaxed">Levent Mah. Büyükdere Cad. No:1<br>Şişli, İstanbul</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-2">📞 Telefon</h4>
+                        <p class="text-gray-600">+90 (212) xxx xx xx</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-2">✉️ E-Posta</h4>
+                        <p class="text-gray-600">example@gmail.com</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-2">🕒 Çalışma Saatleri</h4>
+                        <p class="text-gray-600">Pzt - Cuma: 09:00 - 18:00</p>
+                    </div>
+                </div>
+
+                <!-- Sağ Taraf: İletişim Formu -->
+                <div class="md:w-2/3 bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Adınız Soyadınız</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Ahmet Yılmaz">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">E-Posta Adresiniz</label>
+                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="ornek@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Konu</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Hangi konuda danışmak istiyorsunuz?">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1 flex justify-between">
+                                <span>Mesajınız</span>
+                                <span class="text-xs text-gray-400 font-normal">Maks. 500 karakter</span>
+                            </label>
+                             <textarea rows="5" maxlength="500" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition resize-none" placeholder="Hukuki destek almak istediğiniz konunun detaylarını buraya yazabilirsiniz..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER (ALT BİLGİ) -->
+    <footer class="bg-slate-900 text-gray-300 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Sol Sütun: Marka ve Açıklama -->
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">Adalet Hukuk</h3>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Haklarınızı korumak ve hukuki süreçlerinizi en şeffaf şekilde yönetmek için buradayız. Güveniniz, en büyük referansımızdır.
+                </p>
+            </div>
+
+            <!-- Orta Sütun: Hızlı Bağlantılar -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-4">Hızlı Bağlantılar</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#hero" class="hover:text-blue-400 transition">Ana Sayfa</a></li>
+                    <li><a href="#hizmetler" class="hover:text-blue-400 transition">Çalışma Alanlarımız</a></li>
+                    <li><a href="#ekibimiz" class="hover:text-blue-400 transition">Ekibimiz</a></li>
+                    <li><a href="#iletisim" class="hover:text-blue-400 transition">İletişim</a></li>
+                </ul>
+            </div>
+
+            <!-- Sağ Sütun: Çalışma Saatleri -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-4">Çalışma Saatleri</h4>
+                <p class="text-sm text-gray-400 mb-1">Pazartesi - Cuma</p>
+                <p class="text-sm font-semibold text-white">09:00 - 18:00</p>
+                <p class="text-sm mt-4 text-gray-500 italic">Hafta sonu ve resmi tatillerde kapalıyız.</p>
+            </div>
+
+        </div>
+        
+        <!-- Telif Hakkı (Copyright) Çizgisi -->
+        <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-slate-800 text-center text-sm text-gray-500">
+            &copy; 2026 Adalet Hukuk Bürosu. Tüm hakları saklıdır.
+        </div>
+    </footer>
+
+
+</body>
+</html>
